@@ -1,5 +1,5 @@
 # CutePetsCbus [@CutePetsCbus](http://www.twitter.com/CutePetsCbus)
-This is a bot that retrieves listings from Baltimore City animal shelters and tweets photos and profile links to eligible pets.
+This is a bot that retrieves listings from Columbus animal shelters and tweets photos and profile links to eligible pets.
 
 Inspired by previous work by [CutePetsDenver](https://github.com/codeforamerica/CutePetsDenver) and [CutePetsBMore](https://github.com/Ryan-J-Smith/CutePetsBmore).
 
