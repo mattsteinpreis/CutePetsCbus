@@ -1,1 +1,0 @@
-cutepetscbus: python fetchParsePost.py

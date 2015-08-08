@@ -60,14 +60,14 @@ class rescuePet(object):
             shutil.copyfileobj(res.raw, f)
         del res       
 
-    def postTweet(self):
+    def postTweet(self, myhash):
         '''Get image, format tweet, post tweet'''
 
         # Get image
         self.getImage()
 
         # Create message
-        tweetMsg = 'Hi! My name is {0}. I\'m a {1} {2}. Adopt me at: {3}'.format(self.name, self.gender, self.breed, self.profileURL)
+        tweetMsg = 'Hi! My name is {0}. I\'m a {1} {2}. Adopt me at: {3}. #Columbus #{4}'.format(self.name, self.gender, self.breed, self.profileURL, myhash)
 
         # Post tweet
         twitter = twitterAPI()
@@ -199,8 +199,10 @@ def main():
 #    animalList = ['dog','cat']
     if (curHour % 2 == 1):
         luckySpecies = 'cat'
+        luckyHash = 'kitty'
     elif (curHour % 2 == 0):
         luckySpecies = 'dog'
+        luckyHash = 'puppy'
 
     # Get page
     petangoPage = fetchPetango(luckySpecies, luckyShelter)
@@ -213,7 +215,7 @@ def main():
         if pet.tweetedRecently():
             continue
         else:
-            pet.postTweet()
+            pet.postTweet(luckyHash)
             print pet
             return
 
