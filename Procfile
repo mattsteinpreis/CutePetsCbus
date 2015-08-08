@@ -1,1 +1,1 @@
-web: python fetchParsePost.py
+cutepetscbus: python fetchParsePost.py
